@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation | Sovereign Signals HQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap');
+        
+        :root {
+            --primary: #00d084;
+            --navy-deep: #020c1b;
+            --navy-main: #0a192f;
+            --accent: #64ffda;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--navy-deep);
+            color: #ccd6f6;
+            margin: 0;
+            overflow: hidden; /* Prevents double scrollbars */
+        }
+
+        .bg-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(100, 255, 218, 0.05) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .side-panel {
+            width: 350px;
+            height: 100vh;
+            background: var(--navy-main);
+            border-right: 1px solid rgba(100, 255, 218, 0.1);
+            display: flex;
+            flex-direction: column;
+            z-index: 20;
+            position: relative;
+        }
+
+        .iframe-container {
+            flex-grow: 1;
+            height: 100vh;
+            position: relative;
+            background: #fff; /* DSJ page usually has light background */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .checklist-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            border-color: var(--primary);
+            background: rgba(0, 208, 132, 0.05);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary);
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-grid flex">
+
+    <!-- Left Command Panel -->
+    <aside class="side-panel p-8 shadow-2xl">
+        <div class="mb-10">
+            <!-- Home Link Wrapped Logo Header -->
+            <a href="/index.html" class="flex items-center space-x-3 mb-6 hover:opacity-80 transition-opacity group">
+                <div class="w-10 h-10 bg-primary rounded flex items-center justify-center font-black text-navy-deep text-xl shadow-[0_0_15px_rgba(0,208,132,0.3)] group-hover:scale-105 transition-transform">HQ</div>
+                <div>
+                    <p class="font-bold text-sm leading-none uppercase text-white">Deployment</p>
+                    <p class="text-[9px] text-primary font-mono uppercase tracking-widest font-bold">Level 02 Activation</p>
+                </div>
+            </a>
+            <h2 class="text-xl font-black text-white uppercase tracking-tight">Activation <br><span class="text-primary italic">Protocol.</span></h2>
+        </div>
+
+        <!-- Pre-Flight Checklist -->
+        <div class="space-y-4 flex-grow overflow-y-auto">
+            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-2">Pre-Flight Checklist</p>
+            
+            <div class="checklist-item p-4 rounded-xl">
+                <p class="text-xs font-bold text-white mb-1"><span class="status-dot"></span> Referral Check</p>
+                <p class="text-[10px] text-slate-400">Ensure the invitation code <span class="text-accent font-mono">bo124pet6o00</span> is visible in the form.</p>
+            </div>
+
+            <div class="checklist-item p-4 rounded-xl">
+                <p class="text-xs font-bold text-white mb-1"><span class="status-dot"></span> Accuracy</p>
+                <p class="text-[10px] text-slate-400">Use your primary email and a high-security password for fund safety.</p>
+            </div>
+
+            <div class="checklist-item p-4 rounded-xl">
+                <p class="text-xs font-bold text-white mb-1"><span class="status-dot"></span> Next Move</p>
+                <p class="text-[10px] text-slate-400">Once registered, return to the HQ to request Level 02 verification.</p>
+            </div>
+        </div>
+
+        <!-- Support Access -->
+        <div class="mt-auto pt-6 border-t border-white/5">
+            <a href="/registration.html" target="_blank" class="flex items-center justify-center w-full py-3 bg-[#26A5E4] text-white rounded-lg text-xs font-black uppercase tracking-widest hover:bg-[#1e88be] transition-all">
+                <i class="fab fa-telegram-plane mr-2"></i> Assistance
+            </a>
+            <p class="mt-4 text-[9px] text-slate-600 uppercase text-center mono">Independent Strategic Portal © 2026</p>
+        </div>
+    </aside>
+
+    <!-- Main Embedded Page -->
+    <main class="iframe-container">
+        <!-- Secure Iframe embedding your referral link -->
+        <iframe 
+            src="https://dsj321.com?code=bo124pet6o00" 
+            title="DSJ Registration"
+            allow="payment; clipboard-write"
+            sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-scripts allow-same-origin">
+        </iframe>
+    </main>
+
+</body>
+</html>
