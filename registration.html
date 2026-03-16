@@ -111,9 +111,55 @@
         }
 
         .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #64ffda 0%, #00d084 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-mission {
+            background-color: var(--primary);
+            color: var(--navy-deep);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 208, 132, 0.2);
+        }
+
+        .btn-mission:hover {
+            transform: translateY(-4px);
+            background-color: var(--accent);
+            box-shadow: 0 12px 25px rgba(100, 255, 218, 0.3);
+        }
+
+        .glass-nav {
+            background: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
     </style>
 </head>
 <body class="bg-grid flex">
+
+    <!-- Header (index branding) -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-primary rounded flex items-center justify-center font-black text-navy-deep text-xl shadow-[0_0_15px_rgba(0,208,132,0.4)]">HQ</div>
+                <div class="hidden sm:block text-white">
+                    <p class="font-bold text-lg leading-none tracking-tight uppercase">Sovereign Signals</p>
+                    <p class="text-[10px] text-primary font-mono uppercase tracking-[0.3em] mt-1 font-bold">Level 02 Activation</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="registration.html" class="btn-mission px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest shadow-lg">
+                    Open Account
+                </a>
+                    <a href="https://t.me/StrategicWealthHQ" class="bg-[#26A5E4] text-white px-5 py-2 rounded-lg text-xs font-black hover:bg-[#1e88be] transition-all uppercase tracking-widest shadow-lg">
+                    <i class="fab fa-telegram-plane mr-2"></i> Join Briefing
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Mobile Nav Toggle -->
     <button id="navToggle" class="md:hidden fixed top-4 left-4 z-50 p-3 bg-primary text-navy-deep rounded-lg shadow-lg">
@@ -211,5 +257,76 @@
             document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeNav(); });
         })();
     </script>
+    <!-- HIGH-SHIELD MINIMALIST FOOTER -->
+    <footer class="pt-24 pb-12 border-t border-white/10 bg-[#020c1b] lg:ml-72 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid lg:grid-cols-12 gap-12 mb-16">
+                <div class="lg:col-span-5">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-black text-navy-deep text-lg shadow-lg">HQ</div>
+                        <div>
+                            <p class="font-black text-white uppercase tracking-tighter text-base leading-none">Copy Trading Signals</p>
+                            <p class="text-[8px] text-primary font-mono uppercase tracking-[0.3em] font-bold mt-1">Strategic Intelligence Hub</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-sm mb-6">
+                        Institutional-grade signal replication for the global copy-trading markets. Technical precision, personal sovereignty.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-4 md:col-span-6">
+                    <h4 class="text-white font-black text-[9px] uppercase tracking-[0.3em] mb-6">Briefing Center</h4>
+                    <nav class="grid grid-cols-2 gap-x-4 gap-y-3">
+                        <a href="index.html" class="text-sm text-slate-500 hover:text-primary transition-colors">Portal Home</a>
+                        <a href="https://t.me/StrategicWealthHQ" target="_blank" class="text-sm text-slate-500 hover:text-primary transition-colors">Signal HQ</a>
+                        <a href="registration.html" class="text-sm text-slate-500 hover:text-primary transition-colors">Level 02 Activation</a>
+                        <a href="tools.html" class="text-sm text-slate-500 hover:text-primary transition-colors">Projection Tool</a>
+                    </nav>
+                </div>
+
+                <div class="lg:col-span-3 md:col-span-6">
+                    <div class="p-5 bg-white/[0.02] border border-white/5 rounded-xl">
+                        <p class="text-[9px] font-mono text-primary uppercase tracking-widest mb-1 font-bold">Operational Standards</p>
+                        <p class="text-[9px] text-slate-500 uppercase tracking-[0.2em] mt-1">NAVY // LE // PARTNER</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="relative p-8 bg-navy-main border border-white/10 rounded-3xl overflow-hidden">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="md:w-1/5 shrink-0">
+                            <span class="inline-block px-2 py-0.5 bg-primary/10 border border-primary/20 text-primary text-[8px] font-black uppercase tracking-widest rounded mb-2">Protocol Clause</span>
+                            <h3 class="text-white font-black text-xl uppercase tracking-tighter">Disclosure.</h3>
+                        </div>
+                        <div class="md:w-4/5">
+                            <p class="text-sm leading-relaxed text-slate-400 italic">
+                                This portal is managed by Independent Strategic Partners and private alliance members. It is not an official representative of BG Investment Group, DSJEX, or any government body. Operations are strictly informational, sharing institutional toolsets and signals for educational purposes. We maintain zero access to user capital or credentials. Trading involves risk; no regulated financial advice is provided.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-4 border-y border-white/5 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+                    <i class="fas fa-shield-halved text-primary text-sm opacity-50"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-300">
+                        Integrity Protocol: Use your referrer's specific registration link to protect team growth rewards.
+                    </p>
+                </div>
+
+                <div class="pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-[9px] font-black uppercase tracking-[0.3em]">
+                    <div class="text-slate-600">© 2026 COPY TRADING SIGNALS HQ // MISSION INTELLIGENCE</div>
+                    <div class="flex items-center space-x-6 text-slate-500">
+                        <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                        <span class="w-1 h-1 bg-white/10 rounded-full"></span>
+                        <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                        <span class="w-1 h-1 bg-white/10 rounded-full"></span>
+                        <p class="text-primary italic">Integrity is the only compass</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
